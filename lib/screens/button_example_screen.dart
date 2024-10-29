@@ -93,11 +93,13 @@ class ButtonExampleScreen extends StatelessWidget{
                   ),
                   child: Text('Elevated Button'),
                 )
-
+                // There are four types of buttons in flutter. if you want to try a button
+                // You can add a column where i commented add new Column here.
 
               ],
             ),
           )
+            // You can add new Column here.
           ],
         ),
       ),
