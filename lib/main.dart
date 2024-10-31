@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/screens/button_example_screen.dart';
 import 'package:flutter_tutorial/screens/column_example_screen.dart';
+import 'package:flutter_tutorial/screens/row_column_screen.dart';
 import 'package:flutter_tutorial/screens/row_example_screen.dart';
 import 'package:flutter_tutorial/screens/text_example_screen.dart';
+import 'package:flutter_tutorial/screens/text_widget_info_screen.dart';
 import 'screens/container_example_screen.dart'; // Import screen files here
 
 void main() {
@@ -104,7 +106,30 @@ class HomeScreen extends StatelessWidget {
               );
             },
           ),
-          // Add more ListTile widgets here for each widget screen
+          ListTile(
+            leading: Icon(Icons.ac_unit),
+            title: Text('Text Widget Info Screen'),
+            trailing: Icon(Icons.arrow_forward_ios),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => TextWidgetInfoScreen()
+                  )
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit),
+            title: Text('Row Column Guide'),
+            trailing: Icon(Icons.arrow_forward_ios),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => RowColumnGuideScreen(),
+                  ),
+              );
+            },
+          ),// Add more ListTile widgets here for each widget screen
         ],
       ),
     );
