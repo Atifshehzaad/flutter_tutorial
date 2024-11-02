@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/screens/button_example_screen.dart';
+import 'package:flutter_tutorial/screens/buttons_screen.dart';
 import 'package:flutter_tutorial/screens/column_example_screen.dart';
 import 'package:flutter_tutorial/screens/row_column_screen.dart';
 import 'package:flutter_tutorial/screens/row_example_screen.dart';
+import 'package:flutter_tutorial/screens/scaffold_screen.dart';
 import 'package:flutter_tutorial/screens/text_example_screen.dart';
 import 'package:flutter_tutorial/screens/text_widget_info_screen.dart';
 import 'screens/container_example_screen.dart'; // Import screen files here
@@ -127,6 +129,30 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => RowColumnGuideScreen(),
                   ),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit),
+            title: Text('Buttons Guide Screen'),
+            trailing: Icon(Icons.arrow_forward_ios),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => ButtonGuideScreen(),
+                  ),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit),
+            title: Text('Scaffold Guide Screen'),
+            trailing: Icon(Icons.arrow_forward_ios),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context)=> ScaffoldGuideScreen(),
+                  )
               );
             },
           ),// Add more ListTile widgets here for each widget screen

@@ -7,24 +7,32 @@ class ColumnExampleScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Column Widget Example'),
       ),
-      body: Center(
+      body: Container(
+        height: 600,
+        width: 400,
+        color: Colors.grey,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('First Item'),
-            Text('Second Item'),
-            Text('Third Item'),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Second Column, First Item'),
-              Text('Second Column, Second Item'),
-              Text('Second Column, Third Item'),
+              Text('First Item'),
+              Text('Second Item'),
+              Text('Third Item'),
+            Container(
+              width: 250,
+              height: 250,
+              color: Colors.lightGreen,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Second Column, First Item'),
+                  Text('Second Column, Second Item'),
+                  Text('Second Column, Third Item'),
+                ],
+              ),
+            )
             ],
-          )
-          ],
-        ),
+          ),
       ),
-    );
+      );
   }
 }

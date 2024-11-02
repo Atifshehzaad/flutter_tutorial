@@ -23,7 +23,7 @@ class TextExampleScreen extends StatelessWidget{
         title: Text('Text Widget Example'),
         backgroundColor: Colors.lightGreen,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Text('This is an Example of Text Widget.\n\n'
