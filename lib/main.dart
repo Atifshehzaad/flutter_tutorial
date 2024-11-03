@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/screens/build_method_screen.dart';
 import 'package:flutter_tutorial/screens/button_example_screen.dart';
 import 'package:flutter_tutorial/screens/buttons_screen.dart';
 import 'package:flutter_tutorial/screens/column_example_screen.dart';
+import 'package:flutter_tutorial/screens/layout_example.dart';
+import 'package:flutter_tutorial/screens/layout_guide_screen.dart';
 import 'package:flutter_tutorial/screens/row_column_screen.dart';
 import 'package:flutter_tutorial/screens/row_example_screen.dart';
 import 'package:flutter_tutorial/screens/scaffold_screen.dart';
@@ -10,10 +13,12 @@ import 'package:flutter_tutorial/screens/text_widget_info_screen.dart';
 import 'screens/container_example_screen.dart'; // Import screen files here
 
 void main() {
-  runApp(FlutterTutorial());
+  runApp(const FlutterTutorial());
 }
 
 class FlutterTutorial extends StatelessWidget {
+  const FlutterTutorial({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,28 +27,30 @@ class FlutterTutorial extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Widgets Practice'),
+        title: const Text('Flutter Widgets Practice'),
         backgroundColor: Colors.blue,
       ),
       body: ListView(
-        padding: EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(5.0),
         itemExtent: 70.0,
         children: [
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Container Example', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-            subtitle: Text('Explaination of Container Widget'),
-            trailing: Icon(Icons.arrow_forward_ios),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Container Example', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+            subtitle: const Text('Explanation of Container Widget'),
+            trailing: const Icon(Icons.arrow_forward_ios),
             tileColor: Colors.blue.shade50,
             selectedTileColor: Colors.grey,
             dense: true,
@@ -57,10 +64,10 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Column Example'),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Column Example'),
             tileColor: Colors.yellow.shade50,
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: (){
               Navigator.push(
                   context,
@@ -71,10 +78,10 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Text Example'),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Text Example'),
             tileColor: Colors.green.shade50,
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: (){
               Navigator.push(context,
                   MaterialPageRoute(
@@ -84,10 +91,10 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Row Example'),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Row Example'),
             tileColor: Colors.blue.shade50,
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: (){
               Navigator.push(context,
               MaterialPageRoute(
@@ -97,9 +104,9 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Button Example'),
-            trailing: Icon(Icons.arrow_forward_ios),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Button Example'),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: (){
               Navigator.push(context,
                   MaterialPageRoute(
@@ -109,9 +116,9 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Text Widget Info Screen'),
-            trailing: Icon(Icons.arrow_forward_ios),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Text Widget Info Screen'),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: (){
               Navigator.push(context,
                   MaterialPageRoute(
@@ -121,9 +128,9 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Row Column Guide'),
-            trailing: Icon(Icons.arrow_forward_ios),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Row Column Guide'),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: (){
               Navigator.push(context,
                   MaterialPageRoute(
@@ -133,9 +140,9 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Buttons Guide Screen'),
-            trailing: Icon(Icons.arrow_forward_ios),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Buttons Guide Screen'),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: (){
               Navigator.push(context,
                   MaterialPageRoute(
@@ -145,9 +152,9 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit),
-            title: Text('Scaffold Guide Screen'),
-            trailing: Icon(Icons.arrow_forward_ios),
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Scaffold Guide Screen'),
+            trailing: const Icon(Icons.arrow_forward_ios),
             onTap: (){
               Navigator.push(context,
                   MaterialPageRoute(
@@ -155,7 +162,44 @@ class HomeScreen extends StatelessWidget {
                   )
               );
             },
-          ),// Add more ListTile widgets here for each widget screen
+          ),
+          ListTile(
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Build Method Guide'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder:
+                  (context) =>BuildMethodGuideScreen()
+                  ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Flutter’s layout system'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: (){
+              Navigator.push(context,
+                MaterialPageRoute(builder:
+                    (context) => LayoutGuideScreen(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.ac_unit),
+            title: const Text('Layout Example (Expense Track)'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: (){
+              Navigator.push(context,
+                MaterialPageRoute(builder:
+                    (context) =>ExpenseTrackerScreen(),
+                ),
+              );
+            },
+          ),
+          // Add more ListTile widgets here for each widget screen
         ],
       ),
     );
